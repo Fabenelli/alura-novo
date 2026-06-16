@@ -1,0 +1,190 @@
+:root {
+  --branco-principal: #ffffff;
+  --cinza-secundario: #c0c0c0;
+  --botao-azul: #167bf7;
+  --cor-de-fundo: #00030c;
+  --fonte-principal: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--branco-principal);
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 100vh;
+}
+
+.principal {
+  background-image: linear-gradient(90deg, rgba(0, 3, 12, 0.95) 0%, rgba(0, 3, 12, 0.7) 45%, rgba(0, 3, 12, 0.25) 100%), url('https://www.alura.com.br/assets/img/alura-plus/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container__caixa {
+  margin: 0 6em;
+  text-align: center;
+}
+
+.container__titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.container__imagem {
+  margin: 1.5em 0 2em;
+  max-width: 100%;
+}
+
+.container__botao {
+  background-color: var(--botao-azul);
+  border-radius: 8px;
+  color: var(--branco-principal);
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.container__botao:hover,
+.container__botao:focus {
+  background-color: #3c92fa;
+  transform: translateY(-2px);
+}
+
+.botao_secundario {
+  background-color: transparent;
+  border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+  color: var(--cinza-secundario);
+  font-size: 0.75rem;
+}
+
+.secundario {
+  gap: 4rem;
+  margin: 0 10em;
+  min-height: 70vh;
+}
+
+.secundario__imagem {
+  width: 80%;
+}
+
+.descricao__titulo,
+.dispositivos__titulo {
+  color: var(--branco-principal);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.descricao__texto {
+  color: var(--cinza-secundario);
+  line-height: 1.5;
+}
+
+.secundario__botao {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.dispositivos {
+  padding: 5em 2em;
+  text-align: center;
+}
+
+.dispositivos__lista {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  list-style-type: none;
+  margin: 5em 0;
+}
+
+.lista__item {
+  font-size: 2rem;
+  margin-top: 0.5em;
+}
+
+.rodape {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.rodape__logo {
+  margin-bottom: 2em;
+}
+
+.rodape__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 1.5em;
+}
+
+.lista__link a {
+  color: var(--branco-principal);
+  text-decoration: none;
+}
+
+.lista__link a:hover,
+.lista__link a:focus {
+  color: var(--botao-azul);
+}
+
+.rodape__texto {
+  color: var(--cinza-secundario);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 1em auto 0;
+  max-width: 72rem;
+}
+
+@media (max-width: 900px) {
+  .container,
+  .dispositivos__lista {
+    display: block;
+  }
+
+  .principal {
+    background-image: none;
+  }
+
+  .container__caixa,
+  .secundario {
+    margin: 2em;
+  }
+
+  .secundario {
+    text-align: center;
+  }
+
+  .secundario__imagem {
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .descricao__titulo,
+  .dispositivos__titulo {
+    font-size: 2rem;
+  }
+}
